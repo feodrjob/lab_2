@@ -32,13 +32,13 @@ public class FinanceReportProcessor {
         }
         int index = 0;
         Payment[] payments = new Payment[j];
-        for (int i= 0;i<report.getQuantityPayments();i++){
-            if(report.getPayment(i).getSumPay()<specifiedNumber){
+        for (int i = 0; i < report.getQuantityPayments(); i++) {
+            if (report.getPayment(i).getSumPay() < specifiedNumber) {
                 payments[index] = report.getPayment(i);
                 index++;
             }
         }
-        return new FinanceReport(payments,report.getFio(),report.getDate());
+        return new FinanceReport(payments, report.getFio(), report.getDate());
     }
 
 }
